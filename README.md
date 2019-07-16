@@ -1,52 +1,13 @@
-⚠️ **Note: Development of this project is not currently a high priority, and thus we cannot guarantee timely reviews or interactions on this repository. If you would like to contribute to one of our other Android projects, we recommend checking out [Android Components](https://github.com/mozilla-mobile/android-components). We greatly appreciate your interest in and contributions towards Focus and look forward to working with you on other projects!**
+# Pangolin for Android
 
-# Firefox Focus for Android
+_Browse like no one’s watching. The new browser Pangolin automatically blocks a wide range of online trackers — from the moment you launch it to the second you leave it. Easily erase your history, passwords and cookies, so you won’t get followed by things like unwanted ads._ 
 
-[![Build Status](https://travis-ci.org/mozilla-mobile/focus-android.svg?branch=master)](https://travis-ci.org/mozilla-mobile/focus-android)
-[![Task Status](https://github.taskcluster.net/v1/repository/mozilla-mobile/focus-android/master/badge.svg)](https://github.taskcluster.net/v1/repository/mozilla-mobile/focus-android/master/latest)
-[![codecov](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master/graph/badge.svg)](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master)
-
-
-_Browse like no one’s watching. The new Firefox Focus automatically blocks a wide range of online trackers — from the moment you launch it to the second you leave it. Easily erase your history, passwords and cookies, so you won’t get followed by things like unwanted ads._ 
-
-Firefox Focus provides automatic ad blocking and tracking protection on an easy-to-use private browser.
-
-<a href="https://play.google.com/store/apps/details?id=org.mozilla.focus" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="90"/></a>
-<a href="https://f-droid.org/en/packages/org.mozilla.klar/" target="_blank">
-<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="90"/></a>
-
-* [Google Play: Firefox Focus (Global)](https://play.google.com/store/apps/details?id=org.mozilla.focus)
-* [Google Play: Firefox Klar (Germany, Austria & Switzerland)](https://play.google.com/store/apps/details?id=org.mozilla.klar)
-* [Download APKs](https://github.com/mozilla-mobile/focus-android/releases)
-
-## Getting Involved
-
-
-We encourage you to participate in this open source project. We love Pull Requests, Bug Reports, ideas, (security) code reviews or any other kind of positive contribution. 
-
-Before you attempt to make a contribution please read the [Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
-
-* [Guide to Contributing](https://github.com/mozilla-mobile/shared-docs/blob/master/android/CONTRIBUTING.md) (**New contributors start here!**)
-
-* [View current Issues](https://github.com/mozilla-mobile/focus-android/issues), [view current Pull Requests](https://github.com/mozilla-mobile/focus-android/pulls), or [file a security issue][sec issue].
-
-* IRC: [#focus (irc.mozilla.org)](https://wiki.mozilla.org/IRC) | [view logs](https://mozilla.logbot.info/focus/)
-(**We're available Monday-Friday, GMT and PST working hours**).
-
-* Opt-in to our Mailing List [firefox-focus-public@](https://mail.mozilla.org/listinfo/firefox-focus-public) to keep up to date.
-
-* [View the Wiki](https://github.com/mozilla-mobile/focus-android/wiki).
-
-**Beginners!** - Watch out for [Issues with the "Good First Issue" label](https://github.com/mozilla-mobile/focus-android/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22). These are easy bugs that have been left for first timers to have a go, get involved and make a positive contribution to the project!
+Pangolin provides automatic ad blocking and tracking protection on an easy-to-use private browser.
 
 ## Build Instructions
 
 
 1. Clone or Download the repository:
-
-  ```shell
-  git clone https://github.com/mozilla-mobile/focus-android
-  ```
 
 2. Import the project into Android Studio **or** build on the command line:
 
@@ -58,22 +19,6 @@ Before you attempt to make a contribution please read the [Community Participati
 **focusWebviewArmDebug** for ARM
 **focusWebviewX86Debug** for X86
 **focusWebviewAarch64Debug** for ARM64
-
-## Pre-push hooks
-To reduce review turn-around time, we'd like all pushes to run tests locally. We'd
-recommend you use our provided pre-push hook in `quality/pre-push-recommended.sh`.
-Using this hook will guarantee your hook gets updated as the repository changes.
-This hook tries to run as much as possible without taking too much time.
-
-To add it, run this command from the project root:
-```sh
-ln -s ../../quality/pre-push-recommended.sh .git/hooks/pre-push
-```
-
-To push without running the pre-push hook (e.g. doc updates):
-```sh
-git push <remote> --no-verify
-```
 
 ## License
 
