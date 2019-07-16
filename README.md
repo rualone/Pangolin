@@ -7,7 +7,7 @@ Pangolin provides automatic ad blocking and tracking protection on an easy-to-us
 ## Build Instructions
 
 
-1. Clone or Download the repository:
+1. Clone or Download the repository.
 
 2. Import the project into Android Studio **or** build on the command line:
 
@@ -16,9 +16,9 @@ Pangolin provides automatic ad blocking and tracking protection on an easy-to-us
   ```
 
 3. Make sure to select the correct build variant in Android Studio:
-**focusWebviewArmDebug** for ARM
-**focusWebviewX86Debug** for X86
-**focusWebviewAarch64Debug** for ARM64
+- **focusWebviewArmDebug** for ARM
+- **focusWebviewX86Debug** for X86
+- **focusWebviewAarch64Debug** for ARM64
 
 ## License
 
