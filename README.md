@@ -1,8 +1,8 @@
-# Pangolin for Android
+# Pangoline for Android
 
-_Browse like no one’s watching. The new browser Pangolin automatically blocks a wide range of online trackers — from the moment you launch it to the second you leave it. Easily erase your history, passwords and cookies, so you won’t get followed by things like unwanted ads._ 
+_Browse like no one’s watching. The new browser Pangoline automatically blocks a wide range of online trackers — from the moment you launch it to the second you leave it. Easily erase your history, passwords and cookies, so you won’t get followed by things like unwanted ads._ 
 
-Pangolin provides automatic ad blocking and tracking protection on an easy-to-use private browser.
+Pangoline provides automatic ad blocking and tracking protection on an easy-to-use private browser.
 
 ## Build Instructions
 
