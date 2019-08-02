@@ -50,9 +50,6 @@ android {
         debug {
             applicationIdSuffix ".debug"
         }
-        nightly {
-            initWith release
-        }
     }
     testOptions {
         unitTests {
@@ -119,15 +116,6 @@ android {
         klarX86Debug.root = 'src/klarDebug'
         klarArmDebug.root = 'src/klarDebug'
         klarAarch64Debug.root = 'src/klarDebug'
-
-        // Nightly
-        focusX86Nightly.root = 'src/focusNightly'
-        focusArmNightly.root = 'src/focusNightly'
-        focusAarch64Nightly.root = 'src/focusNightly'
-
-        klarX86Nightly.root = 'src/klarNightly'
-        klarArmNightly.root = 'src/klarNightly'
-        klarAarch64Nightly.root = 'src/klarNightly'
     }
 }
 
@@ -262,7 +250,7 @@ dependencies {
 android.applicationVariants.all { variant ->
     def buildType = variant.buildType.name
 
-    if (buildType == "release" || buildType == "nightly") {
+    if (buildType == "release") {
         def versionCode = generatedVersionCode
 
         // The Google Play Store does not allow multiple APKs for the same app that all have the

@@ -69,7 +69,7 @@ public class Browsers {
     private final Map<String, ActivityInfo> browsers;
     private final ActivityInfo defaultBrowser;
     // This will contain installed firefox branded browser ordered by priority from Firefox,
-    // Firefox Aurora and Firefox_Nightly. If multiple firefox branded browser is
+    // Firefox Aurora. If multiple firefox branded browser is
     // installed then higher priority one will be stored here
     private final ActivityInfo firefoxBrandedBrowser;
 
@@ -96,8 +96,6 @@ public class Browsers {
             return browsers.get(KnownBrowser.FIREFOX.packageName);
         } else if (browsers.containsKey(KnownBrowser.FIREFOX_AURORA.packageName)) {
             return browsers.get(KnownBrowser.FIREFOX_AURORA.packageName);
-        } else if (browsers.containsKey(KnownBrowser.FIREFOX_NIGHTLY.packageName)) {
-            return browsers.get(KnownBrowser.FIREFOX_NIGHTLY.packageName);
         } else if (browsers.containsKey(KnownBrowser.FIREFOX_FDROID.packageName)) {
             return browsers.get(KnownBrowser.FIREFOX_FDROID.packageName);
         }
@@ -191,7 +189,7 @@ public class Browsers {
      * Is (regular) the default browser of the user?
      */
     public boolean isFirefoxDefaultBrowser() {
-        return defaultBrowser != null && (defaultBrowser.packageName.equals(KnownBrowser.FIREFOX.packageName) || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_AURORA.packageName) || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_NIGHTLY.packageName) || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_FDROID.packageName));
+        return defaultBrowser != null && (defaultBrowser.packageName.equals(KnownBrowser.FIREFOX.packageName) || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_AURORA.packageName) || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_FDROID.packageName));
 
     }
 
