@@ -39,8 +39,7 @@ abstract class ScreenshotTest {
             super.beforeActivityLaunched();
 
             // This test is for webview only for now.
-            org.junit.Assume.assumeTrue(!AppConstants.INSTANCE.isGeckoBuild() &&
-                    !AppConstants.INSTANCE.isKlarBuild());
+            org.junit.Assume.assumeTrue(!AppConstants.INSTANCE.isGeckoBuild());
         }
     };
 

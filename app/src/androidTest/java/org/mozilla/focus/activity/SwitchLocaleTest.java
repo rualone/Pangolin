@@ -61,7 +61,7 @@ public class SwitchLocaleTest {
 
             // This test runs on both GV and WV.
             // Klar is used to test Geckoview. make sure it's set to Gecko
-            TestHelper.selectGeckoForKlar();
+
         }
     };
 

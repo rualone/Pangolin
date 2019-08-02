@@ -70,11 +70,6 @@ android {
 
             applicationIdSuffix ".focus"
         }
-        klar {
-            dimension "product"
-
-            applicationIdSuffix ".klar"
-        }
 
         x86 {
             dimension "abi"
@@ -104,18 +99,10 @@ android {
         focusArmRelease.root = 'src/focusRelease'
         focusAarch64Release.root = 'src/focusRelease'
 
-        klarX86Release.root = 'src/klarRelease'
-        klarArmRelease.root = 'src/klarRelease'
-        klarAarch64Release.root = 'src/klarRelease'
-
         // Debug
         focusX86Debug.root = 'src/focusDebug'
         focusArmDebug.root = 'src/focusDebug'
         focusAarch64Debug.root = 'src/focusDebug'
-
-        klarX86Debug.root = 'src/klarDebug'
-        klarArmDebug.root = 'src/klarDebug'
-        klarAarch64Debug.root = 'src/klarDebug'
     }
 }
 

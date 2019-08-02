@@ -54,7 +54,6 @@ import kotlin.collections.HashSet
 )
 object TelemetryWrapper {
     private const val TELEMETRY_APP_NAME_FOCUS = "Focus"
-    private const val TELEMETRY_APP_NAME_KLAR = "Klar"
     private const val LAST_MOBILE_METRICS_PINGS = "LAST_MOBILE_METRICS_PINGS"
 
     private val dateFormat = SimpleDateFormat("yyyyMMdd", Locale.US)
@@ -66,7 +65,7 @@ object TelemetryWrapper {
     private const val HISTOGRAM_MIN_INDEX = 0
 
     private val isEnabledByDefault: Boolean
-        get() = !AppConstants.isKlarBuild
+        get() = !AppConstants.isGeckoBuild
 
     private object Category {
         val ACTION = "action"
@@ -235,7 +234,7 @@ object TelemetryWrapper {
 
             val configuration = TelemetryConfiguration(context)
                     .setServerEndpoint("https://incoming.telemetry.mozilla.org")
-                    .setAppName(if (AppConstants.isKlarBuild) TELEMETRY_APP_NAME_KLAR else TELEMETRY_APP_NAME_FOCUS)
+                    .setAppName(TELEMETRY_APP_NAME_FOCUS)
                     .setUpdateChannel(BuildConfig.BUILD_TYPE)
                     .setPreferencesImportantForTelemetry(
                             resources.getString(R.string.pref_key_search_engine),

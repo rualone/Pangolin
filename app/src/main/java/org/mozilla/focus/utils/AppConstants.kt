@@ -13,10 +13,6 @@ import org.mozilla.focus.web.WebViewProvider
 object AppConstants {
     private const val BUILD_TYPE_RELEASE = "release"
     private const val BUILD_TYPE_DEBUG = "debug"
-    private const val PRODUCT_FLAVOR_KLAR = "klar"
-
-    val isKlarBuild: Boolean
-        get() = PRODUCT_FLAVOR_KLAR == BuildConfig.FLAVOR_product
 
     val isReleaseBuild: Boolean
         get() = BUILD_TYPE_RELEASE == BuildConfig.BUILD_TYPE
