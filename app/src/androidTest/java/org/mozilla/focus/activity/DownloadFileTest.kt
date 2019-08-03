@@ -46,7 +46,7 @@ class DownloadFileTest {
                 .applicationContext
 
             // This test is for webview only. Debug is defaulted to Webview, and Klar is used for GV testing.
-            org.junit.Assume.assumeTrue(!AppConstants.isGeckoBuild && !AppConstants.isKlarBuild)
+            org.junit.Assume.assumeTrue(!AppConstants.isGeckoBuild)
             // This test is for API 25 and greater. see https://github.com/mozilla-mobile/focus-android/issues/2696
             org.junit.Assume.assumeTrue(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
 

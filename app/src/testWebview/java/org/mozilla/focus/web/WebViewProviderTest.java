@@ -16,11 +16,6 @@ public class WebViewProviderTest {
         assertEquals("AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 " + focusToken + " Chrome/37.0.0.0 Mobile Safari/537.36",
                 WebViewProvider.INSTANCE.getUABrowserString(existing, focusToken));
 
-        // Make sure we can use any token, e.g Klar:
-        focusToken = "Klar/2.0";
-        assertEquals("AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 " + focusToken + " Chrome/37.0.0.0 Mobile Safari/537.36",
-                WebViewProvider.INSTANCE.getUABrowserString(existing, focusToken));
-
         // And a non-standard UA String, which doesn't contain AppleWebKit
         focusToken = "Focus/1.0";
         final String imaginaryKit = "Mozilla/5.0 (Linux) ImaginaryKit/-10 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36";

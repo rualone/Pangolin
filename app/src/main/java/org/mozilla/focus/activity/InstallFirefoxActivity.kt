@@ -74,14 +74,11 @@ class InstallFirefoxActivity : Activity() {
         }
 
         fun open(context: Context) {
-            if (AppConstants.isKlarBuild) {
-                // Redirect to Google Play directly
-                context.startActivity(createStoreIntent())
-            } else {
-                // Start this activity to load the redirect URL in a WebView.
-                val intent = Intent(context, InstallFirefoxActivity::class.java)
-                context.startActivity(intent)
-            }
+
+            // Start this activity to load the redirect URL in a WebView.
+            val intent = Intent(context, InstallFirefoxActivity::class.java)
+            context.startActivity(intent)
+
 
             TelemetryWrapper.installFirefoxEvent()
         }

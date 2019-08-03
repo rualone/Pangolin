@@ -64,10 +64,7 @@ class MozillaSettingsFragment : BaseSettingsFragment(),
                 startActivity(intent)
             }
             resources.getString(R.string.pref_key_privacy_notice) -> {
-                val url = if (AppConstants.isKlarBuild)
-                    SupportUtils.PRIVACY_NOTICE_KLAR_URL
-                else
-                    SupportUtils.PRIVACY_NOTICE_URL
+                val url = SupportUtils.PRIVACY_NOTICE_URL
 
                 val session = Session(url, source = Session.Source.MENU)
                 activity.components.sessionManager.add(session, true)

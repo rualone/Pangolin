@@ -53,10 +53,6 @@ public class SettingsBlockToggleTest {
                     .putBoolean(FIRSTRUN_PREF, true)
                     .apply();
 
-            // This test runs on both GV and WV.
-            // Klar is used to test Geckoview. make sure it's set to Gecko
-            TestHelper.selectGeckoForKlar();
-
             webServer = new MockWebServer();
 
             try {

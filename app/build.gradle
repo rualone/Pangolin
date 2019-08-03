@@ -50,9 +50,6 @@ android {
         debug {
             applicationIdSuffix ".debug"
         }
-        nightly {
-            initWith release
-        }
     }
     testOptions {
         unitTests {
@@ -72,11 +69,6 @@ android {
             dimension "product"
 
             applicationIdSuffix ".focus"
-        }
-        klar {
-            dimension "product"
-
-            applicationIdSuffix ".klar"
         }
 
         x86 {
@@ -107,27 +99,10 @@ android {
         focusArmRelease.root = 'src/focusRelease'
         focusAarch64Release.root = 'src/focusRelease'
 
-        klarX86Release.root = 'src/klarRelease'
-        klarArmRelease.root = 'src/klarRelease'
-        klarAarch64Release.root = 'src/klarRelease'
-
         // Debug
         focusX86Debug.root = 'src/focusDebug'
         focusArmDebug.root = 'src/focusDebug'
         focusAarch64Debug.root = 'src/focusDebug'
-
-        klarX86Debug.root = 'src/klarDebug'
-        klarArmDebug.root = 'src/klarDebug'
-        klarAarch64Debug.root = 'src/klarDebug'
-
-        // Nightly
-        focusX86Nightly.root = 'src/focusNightly'
-        focusArmNightly.root = 'src/focusNightly'
-        focusAarch64Nightly.root = 'src/focusNightly'
-
-        klarX86Nightly.root = 'src/klarNightly'
-        klarArmNightly.root = 'src/klarNightly'
-        klarAarch64Nightly.root = 'src/klarNightly'
     }
 }
 
@@ -262,7 +237,7 @@ dependencies {
 android.applicationVariants.all { variant ->
     def buildType = variant.buildType.name
 
-    if (buildType == "release" || buildType == "nightly") {
+    if (buildType == "release") {
         def versionCode = generatedVersionCode
 
         // The Google Play Store does not allow multiple APKs for the same app that all have the

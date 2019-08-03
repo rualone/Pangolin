@@ -139,7 +139,6 @@ public class WebViewDataTest {
             super.beforeActivityLaunched();
 
             // Klar is used to test Geckoview. make sure it's set to Gecko
-            TestHelper.selectGeckoForKlar();
 
             appContext = InstrumentationRegistry.getInstrumentation()
                     .getTargetContext()
@@ -152,7 +151,6 @@ public class WebViewDataTest {
 
             // This test fails permanently on webview, see https://github.com/mozilla-mobile/focus-android/issues/2940")
             // For now, enable on Klar build only
-            org.junit.Assume.assumeTrue(AppConstants.INSTANCE.isKlarBuild());
 
             webServer = new MockWebServer();
 

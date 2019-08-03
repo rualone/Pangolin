@@ -46,7 +46,7 @@ class ShareWebsiteTest {
                 .applicationContext
 
             // This test is for webview only. Debug is defaulted to Webview, and Klar is used for GV testing.
-            org.junit.Assume.assumeTrue(!AppConstants.isGeckoBuild && !AppConstants.isKlarBuild)
+            org.junit.Assume.assumeTrue(!AppConstants.isGeckoBuild )
 
             PreferenceManager.getDefaultSharedPreferences(appContext)
                 .edit()

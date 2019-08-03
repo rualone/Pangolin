@@ -69,7 +69,6 @@ public class MultitaskingTest {
 
             // This test is for webview only. Debug is defaulted to Webview, and Klar is used for GV testing.
             org.junit.Assume.assumeFalse(AppConstants.INSTANCE.isGeckoBuild());
-            org.junit.Assume.assumeFalse(AppConstants.INSTANCE.isKlarBuild());
 
             PreferenceManager.getDefaultSharedPreferences(appContext)
                     .edit()

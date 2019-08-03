@@ -343,11 +343,4 @@ public final class TestHelper {
         onWebView(withText("focus test page"));
     }
 
-    public static void selectGeckoForKlar() {
-        InstrumentationRegistry.getTargetContext().getSharedPreferences("mozilla.components.service.fretboard.overrides",
-                Context.MODE_PRIVATE)
-                .edit()
-                .putBoolean("use-gecko", AppConstants.INSTANCE.isKlarBuild())
-                .commit();
-    }
 }
