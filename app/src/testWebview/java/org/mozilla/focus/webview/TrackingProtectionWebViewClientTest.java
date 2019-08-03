@@ -1,4 +1,4 @@
-package org.mozilla.focus.webview;
+package ru.lampa.pangoline.webview;
 
 import android.net.Uri;
 import android.os.StrictMode;
@@ -26,7 +26,7 @@ import static org.mockito.Mockito.when;
 // http://robolectric.org/getting-started/#note-for-linux-and-mac-users
 
 @RunWith(RobolectricTestRunner.class)
-@Config(packageName = "org.mozilla.focus")
+@Config(packageName = "ru.lampa.pangoline.)
 public class TrackingProtectionWebViewClientTest {
 
     private TrackingProtectionWebViewClient trackingProtectionWebViewClient;

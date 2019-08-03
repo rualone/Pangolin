@@ -1,4 +1,4 @@
-package org.mozilla.focus.webview.matcher.util;
+package ru.lampa.pangoline.webview.matcher.util;
 
 import org.junit.Test;
 

@@ -2,7 +2,7 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-package org.mozilla.focus.webview.matcher;
+package ru.lampa.pangoline.webview.matcher;
 
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -12,7 +12,7 @@ import android.preference.PreferenceManager;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mozilla.focus.R;
+import ru.lampa.pangoline.R;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
@@ -31,7 +31,7 @@ import static junit.framework.Assert.assertTrue;
  * This test also verifies that the entity lists (whitelists for specific domains) actually work
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(packageName = "org.mozilla.focus")
+@Config(packageName = "ru.lampa.pangoline.)
 public class DisconnectTest {
 
     @After

@@ -1,10 +1,10 @@
-package org.mozilla.focus.webview.matcher;
+package ru.lampa.pangoline.webview.matcher;
 
 import android.net.Uri;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mozilla.focus.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.FocusString;
 import org.robolectric.RobolectricTestRunner;
 
 import static org.junit.Assert.assertFalse;

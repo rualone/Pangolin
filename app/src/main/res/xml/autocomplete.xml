@@ -5,7 +5,7 @@
 
     <android.support.v7.preference.PreferenceCategory>
 
-        <org.mozilla.focus.autocomplete.AutocompleteDefaultDomainsPreference
+        <ru.lampa.pangoline.autocomplete.AutocompleteDefaultDomainsPreference
             android:defaultValue="true"
             android:key="@string/pref_key_autocomplete_preinstalled"
             android:summary="@string/preference_autocomplete_topsite_summary"
@@ -15,7 +15,7 @@
 
     <android.support.v7.preference.PreferenceCategory>
 
-        <org.mozilla.focus.autocomplete.AutocompleteCustomDomainsPreference
+        <ru.lampa.pangoline.autocomplete.AutocompleteCustomDomainsPreference
             android:defaultValue="true"
             android:key="@string/pref_key_autocomplete_custom"
             android:summary="@string/preference_autocomplete_user_list_description"

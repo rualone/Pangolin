@@ -391,7 +391,7 @@ def getEnabledLocales() {
     return langs.sort { it }
 }
 
-def generatedLocaleListDir = 'src/main/java/org/mozilla/focus/generated'
+def generatedLocaleListDir = 'src/main/java/ru/lampa/pangoline/generated'
 def generatedLocaleListFilename = 'LocaleList.java'
 
 task generateLocaleList {
@@ -402,7 +402,7 @@ task generateLocaleList {
 
         localeList.delete()
         localeList.createNewFile()
-        localeList << "package org.mozilla.focus.generated;" << "\n" << "\n"
+        localeList << "package ru.lampa.pangoline.generated;" << "\n" << "\n"
         localeList << "import java.util.Arrays;" << "\n"
         localeList << "import java.util.Collections;" << "\n"
         localeList << "import java.util.List;" << "\n"

@@ -11,8 +11,8 @@
         android:shortcutLongLabel="@string/shortcut_erase_long_label">
         <intent
             android:action="erase"
-            android:targetPackage="org.mozilla.focus"
-            android:targetClass="org.mozilla.focus.activity.EraseShortcutActivity">
+            android:targetPackage="ru.lampa.pangoline.
+            android:targetClass="ru.lampa.pangoline.activity.EraseShortcutActivity">
                 <extra android:name="shortcut" android:value="true" />
         </intent>
     </shortcut>
@@ -24,8 +24,8 @@
       android:shortcutLongLabel="@string/shortcut_erase_and_open_short_label">
     <intent
         android:action="erase"
-        android:targetPackage="org.mozilla.focus"
-        android:targetClass="org.mozilla.focus.activity.EraseAndOpenShortcutActivity">
+        android:targetPackage="ru.lampa.pangoline.
+        android:targetClass="ru.lampa.pangoline.activity.EraseAndOpenShortcutActivity">
       <extra android:name="shortcut" android:value="true" />
     </intent>
   </shortcut>

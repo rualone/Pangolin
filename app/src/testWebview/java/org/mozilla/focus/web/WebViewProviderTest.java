@@ -1,4 +1,4 @@
-package org.mozilla.focus.web;
+package ru.lampa.pangoline.web;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
