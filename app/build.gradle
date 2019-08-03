@@ -14,7 +14,7 @@ android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId "org.mozilla"
+        applicationId 'ru.lampa'
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 11 // This versionCode is "frozen" for local builds. For "release" builds we
@@ -95,14 +95,14 @@ android {
         }
 
         // Release
-        focusX86Release.root = 'src/focusRelease'
-        focusArmRelease.root = 'src/focusRelease'
-        focusAarch64Release.root = 'src/focusRelease'
+        focusX86Release.root = 'src/pangolineRelease'
+        focusArmRelease.root = 'src/pangolineRelease'
+        focusAarch64Release.root = 'src/pangolineRelease'
 
         // Debug
-        focusX86Debug.root = 'src/focusDebug'
-        focusArmDebug.root = 'src/focusDebug'
-        focusAarch64Debug.root = 'src/focusDebug'
+        focusX86Debug.root = 'src/pangolineDebug'
+        focusArmDebug.root = 'src/pangolineDebug'
+        focusAarch64Debug.root = 'src/pangolineDebug'
     }
 }
 
@@ -184,8 +184,8 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 
-    focusImplementation 'com.adjust.sdk:adjust-android:4.11.4'
-    focusImplementation 'com.android.installreferrer:installreferrer:1.0' // Required by Adjust
+    implementation 'com.adjust.sdk:adjust-android:4.11.4'
+    implementation 'com.android.installreferrer:installreferrer:1.0' // Required by Adjust
 
     armImplementation ("org.mozilla.geckoview:geckoview-armeabi-v7a:${geckoview_version}")
     x86Implementation ("org.mozilla.geckoview:geckoview-x86:${geckoview_version}")
@@ -307,7 +307,7 @@ android.applicationVariants.all { variant ->
 
     print("Adjust token: ")
 
-    if (variantName.contains("Release") && variantName.contains("focus")) {
+    if (variantName.contains("Release") && variantName.contains("pangoline")) {
         try {
             def token = new File("${rootDir}/.adjust_token").text.trim()
             buildConfigField 'String', 'ADJUST_TOKEN', '"' + token + '"'

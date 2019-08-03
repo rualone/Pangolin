@@ -154,11 +154,11 @@ object WebContextMenu {
         menu.findItem(R.id.menu_open_with_app).isVisible = appLinkData != null
         menu.findItem(R.id.menu_new_tab).isVisible = hitResult.isLink() &&
                 !session.isCustomTabSession()
-        menu.findItem(R.id.menu_open_in_focus).title = resources.getString(
+        menu.findItem(R.id.menu_open_in_pangoline).title = resources.getString(
             R.string.menu_open_with_default_browser2,
             resources.getString(R.string.app_name)
         )
-        menu.findItem(R.id.menu_open_in_focus).isVisible = hitResult.isLink() &&
+        menu.findItem(R.id.menu_open_in_pangoline).isVisible = hitResult.isLink() &&
                 session.isCustomTabSession()
         menu.findItem(R.id.menu_link_share).isVisible = hitResult.isLink()
         menu.findItem(R.id.menu_link_copy).isVisible = hitResult.isLink()
@@ -182,7 +182,7 @@ object WebContextMenu {
 
                     true
                 }
-                R.id.menu_open_in_focus -> {
+                R.id.menu_open_in_pangoline -> {
                     // Open selected link in Focus and navigate there
                     val newSession = Session(hitResult.src, source = Session.Source.MENU)
                     context.components.sessionManager.add(newSession, selected = true)
