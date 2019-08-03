@@ -54,7 +54,7 @@ import ru.lampa.pangoline.web.IWebView;
             case WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE:
                 // hitTestResult.getExtra() contains only the image URL, and not the link
                 // URL. Internally, WebView's HitTestData contains both, but they only
-                // make it available via requestFocusNodeHref...
+                // make it available via requestPangolineNodeHref...
                 final Message message = new Message();
                 message.setTarget(new Handler() {
                     @Override

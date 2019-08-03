@@ -529,7 +529,7 @@ class GeckoWebViewProvider : IWebViewProvider {
 
                 override fun onLocationChange(session: GeckoSession, url: String) {
                     var desiredUrl = url
-                    // Save internal data: urls we should override to present focus:about, focus:rights
+                    // Save internal data: urls we should override to present pangoline:about, pangoline:rights
                     if (isLoadingInternalUrl) {
                         if (currentUrl == LocalizedContent.URL_ABOUT) {
                             internalAboutData = desiredUrl
@@ -540,7 +540,7 @@ class GeckoWebViewProvider : IWebViewProvider {
                         desiredUrl = currentUrl
                     }
 
-                    // Check for internal data: urls to instead present focus:rights, focus:about
+                    // Check for internal data: urls to instead present pangoline:rights, pangoline:about
                     if (!TextUtils.isEmpty(internalAboutData) && internalAboutData == desiredUrl) {
                         desiredUrl = LocalizedContent.URL_ABOUT
                     } else if (!TextUtils.isEmpty(internalRightsData) && internalRightsData == desiredUrl) {

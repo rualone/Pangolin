@@ -175,8 +175,10 @@ public class Browsers {
         return resolveInfo.activityInfo;
     }
 
+
+    /* TODO Здесь делается проверка дефоолтного браузера, нужно убрать проверку на Firefox и сделать проверку на Pangoline */
     /**
-     * Does this user have a default browser that is not Firefox (release) or Focus (this build).
+     * Does this user have a default browser that is not Pangoline.
      */
     public boolean hasThirdPartyDefaultBrowser(Context context) {
         return defaultBrowser != null
@@ -189,7 +191,9 @@ public class Browsers {
      * Is (regular) the default browser of the user?
      */
     public boolean isFirefoxDefaultBrowser() {
-        return defaultBrowser != null && (defaultBrowser.packageName.equals(KnownBrowser.FIREFOX.packageName) || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_AURORA.packageName) || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_FDROID.packageName));
+        return defaultBrowser != null && (defaultBrowser.packageName.equals(KnownBrowser.FIREFOX.packageName)
+                || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_AURORA.packageName)
+                || defaultBrowser.packageName.equals(KnownBrowser.FIREFOX_FDROID.packageName));
 
     }
 
@@ -198,7 +202,7 @@ public class Browsers {
     }
 
     /**
-     * Does this user have browsers installed that are not Focus, Firefox or the default browser?
+     * Does this user have browsers installed that are not Pangoline or the default browser?
      */
     public boolean hasMultipleThirdPartyBrowsers(Context context) {
         if (browsers.size() > 1) {
@@ -210,7 +214,7 @@ public class Browsers {
             if (info != defaultBrowser
                     && !info.packageName.equals(KnownBrowser.FIREFOX.packageName)
                     && !info.packageName.equals(context.getPackageName())) {
-                // There's at least one browser that is not Focus or Firefox and also not the
+                // There's at least one browser that is not Pangoline and also not the
                 // default browser.
                 return true;
             }

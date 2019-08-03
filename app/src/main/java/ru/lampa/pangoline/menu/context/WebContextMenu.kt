@@ -183,7 +183,7 @@ object WebContextMenu {
                     true
                 }
                 R.id.menu_open_in_pangoline -> {
-                    // Open selected link in Focus and navigate there
+                    // Open selected link in Pangoline and navigate there
                     val newSession = Session(hitResult.src, source = Session.Source.MENU)
                     context.components.sessionManager.add(newSession, selected = true)
 

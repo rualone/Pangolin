@@ -48,7 +48,7 @@ public class DownloadBroadcastReceiver extends BroadcastReceiver {
     }
 
     private void displaySnackbar(final Context context, long completedDownloadReference, DownloadManager downloadManager) {
-        if (!isFocusDownload(completedDownloadReference)) {
+        if (!isPangolineDownload(completedDownloadReference)) {
             return;
         }
 
@@ -99,7 +99,7 @@ public class DownloadBroadcastReceiver extends BroadcastReceiver {
         snackbar.show();
     }
 
-    private boolean isFocusDownload(long completedDownloadReference) {
+    private boolean isPangolineDownload(long completedDownloadReference) {
         return (queuedDownloadReferences.contains(completedDownloadReference));
     }
 

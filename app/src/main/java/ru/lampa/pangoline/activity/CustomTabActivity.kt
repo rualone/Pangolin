@@ -37,7 +37,7 @@ class CustomTabActivity : MainActivity() {
         super.onPause()
 
         if (isFinishing && customTabSession.isCustomTabSession()) {
-            // This may not be a custom tab session anymore ("open in firefox focus"). So only remove it if this
+            // This may not be a custom tab session anymore ("open in pangoline"). So only remove it if this
             // activity is finishing and this is still a custom tab session.
             components.sessionManager.removeAndCloseSession(customTabSession)
         }

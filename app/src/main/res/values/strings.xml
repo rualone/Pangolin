@@ -42,7 +42,7 @@
 
     <!-- Menu item: Switch to another browser to open the currently visible page. This menu item
       will be shown if there are multiple browsers and we do not know which one is the default
-      browser or in case Focus is actually the default browser. Clicking this menu item will show
+      browser or in case Pangoline is actually the default browser. Clicking this menu item will show
       a screen with multiple browsers (or other apps that can open the current URL) to choose from. -->
     <string name="menu_open_with_a_browser2">Open in…</string>
 
@@ -72,9 +72,7 @@
     <!-- This is the subtitle content blocking toggle -->
     <string name="menu_content_blocking_subtitle">Turn off to fix some sites</string>
 
-    <!-- This is a small text at the bottom of the menu shown in a "custom tab" for branding purposes.
-     See https://github.com/mozilla-mobile/focus-android/issues/2106
-      %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+
     <string name="menu_custom_tab_branding">Powered by %1$s</string>
 
     <!-- This is the title of a dialog that shows all the share targets (apps or contacts) when
@@ -87,10 +85,10 @@
          button in the application. -->
     <string name="notification_erase_text">Erase browsing history</string>
 
-    <!-- Notification action to open Focus and resume the current browsing session. -->
+    <!-- Notification action to open Pangoline and resume the current browsing session. -->
     <string name="notification_action_open">Open</string>
 
-    <!-- Notification action to erase the current browsing session AND switch to Focus (bring it
+    <!-- Notification action to erase the current browsing session AND switch to Pangoline (bring it
          to the foreground) -->
     <string name="notification_action_erase_and_open">Erase and Open</string>
 
@@ -109,10 +107,10 @@
     <string name="shortcut_erase_and_open_short_label">Erase &amp; open</string>
 
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
-         Clicking this action will launch Focus and perform a search in the default search engine. -->
+         Clicking this action will launch Pangoline and perform a search in the default search engine. -->
     <string name="text_selection_search_action">Search Privately</string>
 
-    <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
+    <!-- Content of about focus. Argument 1 is the app name (Pangoline).
          Argument 2 is the url for the learn-more link. -->
     <string name="about_content"><![CDATA[
 <p>%1$s puts you in control.</p>
@@ -139,7 +137,7 @@
 
     <!-- Preference category description for settings screen for settings related to Mozilla -->
     <!-- About the app and help are links that are inside this menu -->
-    <!-- %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <!-- %1$s will be replaced by the app name (Pangoline) -->
     <string name="preference_mozilla_summary">About %1$s, help</string>
 
     <!-- Preference category for ad blocking -->
@@ -168,7 +166,7 @@
     <!-- Title of "switch" preference that enables/disables search suggestions -->
     <string name="preference_show_search_suggestions">Get search suggestions</string>
     <!-- Description of the preference that enables/disables search suggestions
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+        %1$s will be replaced by the app name (Pangoline) -->
     <string name="preference_show_search_suggestions_summary">%1$s will send what you type in the address bar to your search engine</string>
 
     <!-- This label is shown below the name of the default search engine in settings -->
@@ -256,7 +254,7 @@
     <string name="preference_autocomplete_add_error">Double-check the URL you entered.</string>
 
     <string name="preference_language">Language</string>
-    <!-- This is shown when the user hasn't set a focus specific language, i.e. when Focus
+    <!-- This is shown when the user hasn't set a focus specific language, i.e. when Pangoline
          is using the system default language. -->
     <string name="preference_language_systemdefault">System default</string>
 
@@ -297,11 +295,11 @@
     <string name="preference_privacy_block_cookies_third_party_only">Block all third-party cookies \n(may cause websites to break)</string>
     <string name="preference_privacy_block_cookies_yes">Block all cookies (will cause websites to break)</string>
 
-    <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
+    <!-- Preference Title: Biometrics can be used to unlock Pangoline if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Use fingerprint to unlock app</string>
-    <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
+    <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Pangoline if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+        %1$s will be replaced by the app name (Pangoline) -->
     <string name="preference_security_biometric_summary">Your fingerprint can unlock %1$s if a URL is already opened in the app.
     Stealth will be turned on.</string>
 
@@ -325,10 +323,10 @@
     <!-- This text is shown below setting for disabling JavaScript. Some websites may not work correctly when JavaScript is disabled -->
     <string name="preference_performance_block_javascript_summary">Pages may load faster, but may also behave unexpectedly</string>
 
-    <!-- This preference does not set Focus as the default browser but instead links to Android's
+    <!-- This preference does not set Pangoline as the default browser but instead links to Android's
      "default apps" settings screen or if not supported by this Android version to a SUMO page describing
-     how to set Focus as a default browser.
-      %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+     how to set Pangoline as a default browser.
+      %1$s will be replaced by the app name (e.g. Firefox Pangoline) -->
     <string name="preference_default_browser2">Make %1$s default browser</string>
 
     <string name="preference_category_mozilla">Mozilla</string>
@@ -337,13 +335,13 @@
     <!-- A link to SUMO at the end of the summary (preference_mozilla_telemetry_summary2) of the "Send anonymous usage data" setting. -->
     <string name="preference_mozilla_telemetry_summary">Learn more</string>
 
-    <!-- %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <!-- %1$s will be replaced with the name of the app (Pangoline) -->
     <string name="preference_mozilla_telemetry_summary2">Mozilla strives to collect only what we need to provide and improve %1$s for everyone.</string>
 
-    <!-- In-app link (in settings) to Focus privacy notice. -->
+    <!-- In-app link (in settings) to Pangoline privacy notice. -->
     <string name="preference_privacy_notice">Privacy Notice</string>
 
-    <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
+    <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Pangoline. -->
     <string name="preference_about">About %1$s</string>
 
     <!-- Header for the list of installed search engines -->
@@ -384,9 +382,6 @@
     <!-- Content description (not visible, for screen readers etc.): Clear text in URL bar -->
     <string name="content_description_clear_input">Clear input</string>
 
-    <!-- Content description (not visible, for screen readers etc.): Clicking on the website overlay
-     while in typing mode will dismiss and go back to the browser. This text will be read when the
-     overlay if focused. See https://github.com/mozilla-mobile/focus-android/issues/50 -->
     <string name="content_description_dismiss_input">Dismiss</string>
 
     <!-- Content description (not visible, for screen readers etc.): Erase button: Erase the browsing
@@ -444,11 +439,11 @@
 
     <string name="external_app_prompt_title">Open link in another  app</string>
     <!-- This string is shown when the user has clicked a link that needs to be opened in a different app.
-         Argument 2 is the external app name, argument 1 is our name (i.e. Firefox Focus, or Firefox Klar). -->
+         Argument 2 is the external app name, argument 1 is our name (Pangoline). -->
     <string name="external_app_prompt">You can leave %1$s to open this link in %2$s.</string>
     <!-- This text is the title of a dialog shown if no app could be found for a custom link protocol. -->
     <string name="external_app_prompt_no_app_title">Find an app that can open link</string>
-    <!-- This text is shown in a dialog if no app could be found for a custom link protocol. %1$s is the name of the app (i.e. Firefox Focus) and %2$s is the name of
+    <!-- This text is shown in a dialog if no app could be found for a custom link protocol. %1$s is the name of the app (i.e. Pangoline) and %2$s is the name of
          the app store installed on the device (usually that's Google Play). -->
     <string name="external_app_prompt_no_app">None of the apps on your device are able to open this link. You can leave %1$s to search %2$s for an app that can.</string>
     <!-- This label is shown above a list of apps that can be used to open a given link -->
@@ -460,7 +455,7 @@
     <!-- Snackbar action to immediately open the successfully downloaded file. -->
     <string name="download_snackbar_open">Open</string>
 
-    <!-- Download dialog: Warns users that downloaded files will not be deleted even when erasing history. %1$s will be replaced with the app name (i.e. Firefox Focus). -->
+    <!-- Download dialog: Warns users that downloaded files will not be deleted even when erasing history. %1$s will be replaced with the app name (i.e. Pangoline). -->
     <string name="download_dialog_warning"><![CDATA[Downloaded files <b>will not be deleted</b> when you erase %1$s history.]]></string>
 
     <!-- Title of download dialogue -->
@@ -549,7 +544,7 @@ be temporary, and you can try again later.</li>
     <!-- Label used in the contextmenu shown when long-pressing on a link -->
     <string name="contextmenu_open_in_new_tab">Open link in new tab</string>
 
-    <!-- This is a warning shown in the browser's context menu (when long pressing an image). %1$s will be replaced with the long name of the app (e.g. Firefox Focus). -->
+    <!-- This is a warning shown in the browser's context menu (when long pressing an image). %1$s will be replaced with the long name of the app (e.g. Pangoline). -->
     <string name="contextmenu_image_warning"><![CDATA[Saved and shared images <b>will not be deleted</b> when you erase %1$s history.]]></string>
 
     <!-- First run tour (Default browser): Title -->
@@ -566,19 +561,19 @@ be temporary, and you can try again later.</li>
 
     <!-- First run tour (Shortcut): Title -->
     <string name="firstrun_shortcut_title">Add shortcuts to your home screen</string>
-    <!-- First run tour (Shortcut): Text. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <!-- First run tour (Shortcut): Text. %1$s will be replaced with the name of the app (e.g. Pangoline) -->
     <string name="firstrun_shortcut_text">Return to your favorite sites in %1$s quickly. Just select \"Add to Home screen\" from the %1$s menu.</string>
 
     <!-- First run tour (Privacy): Title -->
     <string name="firstrun_privacy_title">Make privacy a habit</string>
-    <!-- First run tour (Privacy): Text. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <!-- First run tour (Privacy): Text. %1$s will be replaced with the name of the app (e.g. Pangoline) -->
     <string name="firstrun_privacy_text">Set %1$s as your default browser and get the benefits of private browsing when you open webpages from other apps.</string>
 
     <string name="firstrun_close_button">OK, got it!</string>
     <string name="firstrun_skip_button">Skip</string>
     <string name="firstrun_next_button">Next</string>
 
-    <!-- Title for intro card shown to users after updating. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <!-- Title for intro card shown to users after updating. %1$s will be replaced with the name of the app (e.g. Pangoline) -->
     <string name="block_ads_card_title">%1$s is ready to block ads</string>
 
     <!-- Description for intro card shown to users after updating. -->
@@ -601,15 +596,12 @@ be temporary, and you can try again later.</li>
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
 
     * To understand what notification channels are, see: https://www.androidcentral.com/notification-channels
-    * To see how this string will look like in Android's UI, see: https://github.com/mozilla-mobile/focus-android/issues/863#issuecomment-324105723
+    * To see how this string will look like in Android's UI, see: https://github.com/mozilla-mobile/Pangoline-android/issues/863#issuecomment-324105723
     -->
     <string name="notification_browsing_session_channel_name">Private browsing session</string>
 
     <!-- The user visible description of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
-    The recommended maximum length is 300 characters; the value may be truncated if it is too long. %1$s will be replaced with the name of the app (e.g. Firefox Focus).
-
-    * To understand what notification channels are, see: https://www.androidcentral.com/notification-channels
-    * To see how this string will look like in Android's UI, see: https://github.com/mozilla-mobile/focus-android/issues/863#issuecomment-324105723
+    The recommended maximum length is 300 characters; the value may be truncated if it is too long. %1$s will be replaced with the name of the app (e.g. Pangoline).
     -->
     <string name="notification_browsing_session_channel_description">Notifications let you erase your %1$s session with a tap. You don’t need to open the app or see what’s running in your browser.</string>
 
@@ -621,26 +613,26 @@ be temporary, and you can try again later.</li>
     <string name="download_firefox">Download Firefox</string>
 
     <!-- Text shown in the "Your rights" screen.
-    %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
+    %1$s will be replaced with the name of the app (e.g. Pangoline)-->
     <string name="your_rights_content1"><![CDATA[%1$s is free and open source software made by Mozilla and other contributors.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
-    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %1$s will be replaced with the name of the app (e.g. Pangoline)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
     <string name="your_rights_content2"><![CDATA[%1$s is made available to you under the terms of the <a href="%2$s">Mozilla Public License</a> and other open source licenses.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
-    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %1$s will be replaced with the name of the app (e.g. Pangoline)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
     <string name="your_rights_content3"><![CDATA[You are not granted any rights or licenses to the trademarks of the Mozilla Foundation or any party, including the Mozilla, Firefox or %1$s names or logos. Additional information may be found <a href="%2$s">here</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
-    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %1$s will be replaced with the name of the app (e.g. Pangoline)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
     <string name="your_rights_content4"><![CDATA[Additional source code for %1$s is available under various other free and open source <a href="%2$s">licenses</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
-    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %1$s will be replaced with the name of the app (e.g. Pangoline)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
     <string name="your_rights_content5"><![CDATA[%1$s also uses blocklists provided by Disconnect, Inc. as separate and independent works under the <a href="%2$s">GNU General Public License v3</a>, and available <a href="%3$s">here</a>.]]></string>
@@ -678,7 +670,7 @@ be temporary, and you can try again later.</li>
     <string name="accessibility_next_result">Find next result</string>
     <!-- String to be read by the accessibility service when focusing the previous result button -->
     <string name="accessibility_previous_result">Find previous result</string>
-    <!-- String to be read by the accessibility service when focusing the dismiss button in the "find in page" UI -->
+    <!-- String to be read by the accessibility service when Pangolineing the dismiss button in the "find in page" UI -->
     <string name="accessibility_dismiss_find_in_page">Dismiss find in page</string>
     
     <!-- Http Authentication Popup: Title -->
@@ -733,7 +725,7 @@ be temporary, and you can try again later.</li>
     <string name="enable_search_suggestion_title">Would you like to turn on search suggestions?</string>
 
     <!-- Description for the prompt to enable search suggestions
-        %1$s will be replaced by the app name (e.g. Firefox Focus)
+        %1$s will be replaced by the app name (e.g. Pangoline)
         %2$s will be replaced with "Learn more" which will be a tappable link
         using the string: "enable_search_suggestion_subtitle_learnmore" -->
     <string name="enable_search_suggestion_subtitle">To get search suggestions, %1$s needs to send what you type in the address bar to the search engine you’ve chosen. %2$s.</string>
@@ -765,8 +757,8 @@ be temporary, and you can try again later.</li>
     Argument 1 will be replaced with a line break in the application.-->
     <string name="tip_add_to_homescreen"><![CDATA[Get one-tap access to sites you use most%1$s Menu > Add to Home screen]]></string>
 
-    <!-- Tip displayed on home view explaining how to make Focus the default browser
-    Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
+    <!-- Tip displayed on home view explaining how to make Pangoline the default browser
+    Argument 1 is the app name (Pangoline).
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_set_default_browser">Open every link in %1$s\n
         Set %1$s as default browser
@@ -838,14 +830,14 @@ be temporary, and you can try again later.</li>
     <string name="tab_crash_report_close_tab_button_label">Close Tab</string>
 
     <!-- Title for the fatal crash report window
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+        %1$s will be replaced by the app name (e.g. Pangoline) -->
     <string name="fatal_crash_report_title">Sorry. %1$s had a problem and crashed.</string>
     <!-- Description for the fatal crash report window -->
     <string name="fatal_crash_report_description">As a private browser, we never save and cannot restore your last browsing session.</string>
     <!-- Label for the button that closes the window -->
     <string name="fatal_crash_report_close_button_label">Close</string>
     <!-- Label for the button to restart Firefox
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+        %1$s will be replaced by the app name (e.g. Pangoline) -->
     <string name="fatal_crash_report_restart_firefox_label">Restart %1$s</string>
 
 

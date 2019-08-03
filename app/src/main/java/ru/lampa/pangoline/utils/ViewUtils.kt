@@ -88,7 +88,7 @@ object ViewUtils {
     }
 
     /**
-     * Create a snackbar with Focus branding (See #193).
+     * Create a snackbar with Pangoline branding (See #193).
      */
     fun showBrandedSnackbar(view: View?, @StringRes resId: Int, delayMillis: Int) {
         val context = view!!.context

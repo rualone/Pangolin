@@ -19,7 +19,7 @@ import ru.lampa.pangoline.shortcut.HomeScreen
 import ru.lampa.pangoline.utils.UrlUtils
 
 /**
- * Implementation moved from Focus SessionManager. To be replaced with SessionIntentProcessor from feature-session
+ * Implementation moved from Pangoline SessionManager. To be replaced with SessionIntentProcessor from feature-session
  * component soon.
  */
 class IntentProcessor(

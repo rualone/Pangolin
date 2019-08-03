@@ -25,8 +25,8 @@ import java.util.Map;
 public class LocalizedContent {
     // We can't use "about:" because webview silently swallows about: pages, hence we use
     // a custom scheme.
-    public static final String URL_ABOUT = "focus:about";
-    public static final String URL_RIGHTS = "focus:rights";
+    public static final String URL_ABOUT = "pangoline:about";
+    public static final String URL_RIGHTS = "pangoline:rights";
 
     public static boolean handleInternalContent(String url, IWebView webView, Context context) {
         if (URL_ABOUT.equals(url)) {
@@ -41,7 +41,7 @@ public class LocalizedContent {
     }
 
     /**
-     * Load the content for focus:about
+     * Load the content for pangoline:about
      */
     private static void loadAbout(@NonNull final IWebView webView, Context context) {
         final Resources resources = Locales.getLocalizedResources(context);
@@ -76,7 +76,7 @@ public class LocalizedContent {
     }
 
     /**
-     * Load the content for focus:rights
+     * Load the content for pangoline:rights
      */
     private static void loadRights(@NonNull final IWebView webView, Context context) {
         final Resources resources = Locales.getLocalizedResources(context);

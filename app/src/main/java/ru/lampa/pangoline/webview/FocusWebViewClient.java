@@ -151,7 +151,7 @@ import static android.view.View.IMPORTANT_FOR_ACCESSIBILITY_YES;
     @Override
     public void onPageStarted(WebView view, String url, Bitmap favicon) {
 
-        /* Temporarily disable TalkBack on WebView so it doesn't grab the focus before we can
+        /* Temporarily disable TalkBack on WebView so it doesn't grab the pangoline before we can
         read out the URL. */
         view.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
 
@@ -248,7 +248,7 @@ import static android.view.View.IMPORTANT_FOR_ACCESSIBILITY_YES;
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        // If this is an internal URL like focus:about then we load the content ourselves here.
+        // If this is an internal URL like pangoline:about then we load the content ourselves here.
         if (LocalizedContent.handleInternalContent(url, (IWebView) view, view.getContext())) {
             return true;
         }

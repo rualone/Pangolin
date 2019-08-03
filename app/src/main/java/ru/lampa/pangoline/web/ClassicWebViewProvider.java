@@ -166,10 +166,10 @@ public class ClassicWebViewProvider implements IWebViewProvider {
     @NonNull
     public String getUABrowserString(@NonNull final String existingUAString, @NonNull final String pangolineToken) {
         // Use the default WebView agent string here for everything after the platform, but insert
-        // Focus in front of Chrome.
+        // Pangoline in front of Chrome.
         // E.g. a default webview UA string might be:
         // Mozilla/5.0 (Linux; Android 7.1.1; Pixel XL Build/NOF26V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Mobile Safari/537.36
-        // And we reuse everything from AppleWebKit onwards, except for adding Focus.
+        // And we reuse everything from AppleWebKit onwards, except for adding Pangoline.
         int start = existingUAString.indexOf("AppleWebKit");
         if (start == -1) {
             // I don't know if any devices don't include AppleWebKit, but given the diversity of Android
@@ -178,7 +178,6 @@ public class ClassicWebViewProvider implements IWebViewProvider {
             start = existingUAString.indexOf(")") + 2;
 
             // If this was located at the very end, then there's nothing we can do, so let's just
-            // return focus:
             if (start >= existingUAString.length()) {
                 return pangolineToken;
             }
@@ -194,7 +193,7 @@ public class ClassicWebViewProvider implements IWebViewProvider {
             }
         }
 
-        // If we didn't find a chrome token, we just append the focus token at the end:
+        // If we didn't find a chrome token, we just append the pangoline token at the end:
         return TextUtils.join(" ", tokens) + " " + pangolineToken;
     }
 
@@ -217,7 +216,7 @@ public class ClassicWebViewProvider implements IWebViewProvider {
             appVersion = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             // This should be impossible - we should always be able to get information about ourselves:
-            throw new IllegalStateException("Unable find package details for Focus", e);
+            throw new IllegalStateException("Unable find package details for Pangoline", e);
         }
 
         final String pangolineToken = appName + "/" + appVersion;

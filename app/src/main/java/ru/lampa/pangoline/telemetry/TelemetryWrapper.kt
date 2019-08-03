@@ -53,7 +53,7 @@ import kotlin.collections.HashSet
         "LargeClass"
 )
 object TelemetryWrapper {
-    private const val TELEMETRY_APP_NAME_FOCUS = "Focus"
+    private const val TELEMETRY_APP_NAME = "Pangoline"
     private const val LAST_MOBILE_METRICS_PINGS = "LAST_MOBILE_METRICS_PINGS"
 
     private val dateFormat = SimpleDateFormat("yyyyMMdd", Locale.US)
@@ -234,7 +234,7 @@ object TelemetryWrapper {
 
             val configuration = TelemetryConfiguration(context)
                     .setServerEndpoint("https://incoming.telemetry.mozilla.org")
-                    .setAppName(TELEMETRY_APP_NAME_FOCUS)
+                    .setAppName(TELEMETRY_APP_NAME)
                     .setUpdateChannel(BuildConfig.BUILD_TYPE)
                     .setPreferencesImportantForTelemetry(
                             resources.getString(R.string.pref_key_search_engine),

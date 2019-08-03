@@ -41,7 +41,6 @@ public class LocaleListPreference extends ListPreference {
         // Only ICU 57 actually contains the Asturian name for Asturian, even Android 7.1 is still
         // shipping with ICU 56, so we need to override the Asturian name (otherwise displayName will
         // be the current locales version of Asturian, see:
-        // https://github.com/mozilla-mobile/focus-android/issues/634#issuecomment-303886118
         languageCodeToNameMap.put("ast", "Asturianu");
         // On an Android 8.0 device those languages are not known and we need to add the names
         // manually. Loading the resources at runtime works without problems though.

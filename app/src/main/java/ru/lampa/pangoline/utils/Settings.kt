@@ -123,7 +123,7 @@ class Settings private constructor(context: Context) {
             ) -> resources.getString(R.string.pref_key_should_block_cookies_third_party_only)
             else -> {
                 // We don't recognize the cookie value so let's clear the setting, this could be
-                // caused by locale switching after choosing a cookie setting in previous Focus versions
+                // caused by locale switching after choosing a cookie setting in previous Pangoline versions
                 val defaultValueForEngine =
                     if (AppConstants.isGeckoBuild)
                         resources.getString(R.string.pref_key_should_block_cookies_third_party_trackers_only)

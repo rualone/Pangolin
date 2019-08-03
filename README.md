@@ -16,9 +16,9 @@ Pangoline provides automatic ad blocking and tracking protection on an easy-to-u
   ```
 
 3. Make sure to select the correct build variant in Android Studio:
-- **focusWebviewArmDebug** for ARM
-- **focusWebviewX86Debug** for X86
-- **focusWebviewAarch64Debug** for ARM64
+- **pangolineWebviewArmDebug** for ARM
+- **pangolineWebviewX86Debug** for X86
+- **pangolineWebviewAarch64Debug** for ARM64
 
 ## License
 
@@ -26,5 +26,3 @@ Pangoline provides automatic ad blocking and tracking protection on an easy-to-u
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at http://mozilla.org/MPL/2.0/
-
-[sec issue]: https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&component=Security%3A%20Android&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-4=X&flag_type-607=X&flag_type-791=X&flag_type-800=X&flag_type-803=X&form_name=enter_bug&groups=firefox-core-security&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Unspecified&priority=--&product=Focus&rep_platform=Unspecified&target_milestone=---&version=---

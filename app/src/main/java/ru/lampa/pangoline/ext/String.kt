@@ -12,7 +12,6 @@ import ru.lampa.pangoline.utils.UrlUtils
 /**
  * Beautify a URL by truncating it in a way that highlights important parts of the URL.
  *
- * Spec: https://github.com/mozilla-mobile/focus-android/issues/1231#issuecomment-326237077
  */
 fun String.beautifyUrl(): String {
     if (isNullOrEmpty() || !UrlUtils.isHttpOrHttps(this)) {

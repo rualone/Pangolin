@@ -48,7 +48,7 @@ public class TrackingProtectionWebViewClientTest {
         // and PangolineApplication crashes during initialisation for the second test.
         // This applies across multiple Test classes, e.g. DisconnectTest can cause
         // TrackingProtectionWebViewCLientTest to fail, unless it clears StrictMode first.
-        // (FocusApplicaiton is initialised before @Before methods are run.)
+        // (PangolineApplicaiton is initialised before @Before methods are run.)
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().build());
     }
 

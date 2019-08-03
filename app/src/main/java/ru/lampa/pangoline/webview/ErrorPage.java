@@ -94,7 +94,7 @@ public class ErrorPage {
 
         // This is quite hacky: ideally we'd just load the css file directly using a '<link rel="stylesheet"'.
         // However WebView thinks it's still loading the original page, which can be an https:// page.
-        // If mixed content blocking is enabled (which is probably what we want in Focus), then webkit
+        // If mixed content blocking is enabled (which is probably what we want in Pangoline), then webkit
         // will block file:///android_res/ links from being loaded - which blocks our css from being loaded.
         // We could hack around that by enabling mixed content when loading an error page (and reenabling it
         // once that's loaded), but doing that correctly and reliably isn't particularly simple. Loading

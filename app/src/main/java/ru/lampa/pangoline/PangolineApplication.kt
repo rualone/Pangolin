@@ -52,7 +52,7 @@ class PangolineApplication : LocaleAwareApplication(), CoroutineScope {
     override fun onCreate() {
         super.onCreate()
 
-        Log.addSink(AndroidLogSink("Focus"))
+        Log.addSink(AndroidLogSink("Pangoline"))
         CrashReporterWrapper.init(this)
 
         StethoWrapper.init(this)
@@ -104,7 +104,7 @@ class PangolineApplication : LocaleAwareApplication(), CoroutineScope {
 
     private fun enableStrictMode() {
         // Android/WebView sometimes commit strict mode violations, see e.g.
-        // https://github.com/mozilla-mobile/focus-android/issues/660
+        // https://github.com/mozilla-mobile/pangoline-android/issues/660
         if (AppConstants.isReleaseBuild) {
             return
         }

@@ -64,7 +64,7 @@ private class DummyEngine : Engine {
 
 /**
  * This is a workaround for setting up the Session object. Once we use browser-engine we can just setup the Engine to
- * use specific default settings. For now we need to manually update every created Session model to reflect what Focus
+ * use specific default settings. For now we need to manually update every created Session model to reflect what Pangoline
  * expects as default.
  */
 class SessionSetupObserver : SessionManager.Observer {

@@ -64,7 +64,7 @@ android {
     flavorDimensions "product", "abi"
 
     productFlavors {
-        // In most countries we are Firefox Focus - but in some we need to be Firefox Klar
+
         pangoline {
             dimension "product"
 
@@ -348,7 +348,7 @@ android.applicationVariants.all {
 
 // -------------------------------------------------------------------------------------------------
 // L10N: Generate list of locales
-// Focus provides its own (Android independent) locale switcher. That switcher requires a list
+// Pangoline provides its own (Android independent) locale switcher. That switcher requires a list
 // of locale codes. We generate that list here to avoid having to manually maintain a list of locales:
 // -------------------------------------------------------------------------------------------------
 

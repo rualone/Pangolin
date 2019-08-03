@@ -107,8 +107,7 @@ class Tip(val id: Int, val text: String, val shouldDisplay: () -> Boolean, val d
         fun createAutocompleteURLTip(context: Context): Tip {
             val id = tip_autocomplete_url
             val name = context.resources.getString(id)
-            val autocompleteURL =
-                    "https://support.mozilla.org/en-US/kb/autocomplete-settings-firefox-focus-address-bar"
+            val autocompleteURL = "https://support.mozilla.org/en-US/kb/autocomplete-settings-firefox-focus-address-bar"
 
             val shouldDisplayAutocompleteUrl = {
                 !Settings.getInstance(context).shouldAutocompleteFromCustomDomainList()
@@ -224,7 +223,7 @@ object TipManager {
             listInitialized = true
         }
 
-        // Only show three tips before going back to the "Focus" branding
+        // Only show three tips before going back to the "Pangoline" branding
         if (tipsShown == MAX_TIPS_TO_DISPLAY || listOfTips.count() <= 0) {
             return null
         }

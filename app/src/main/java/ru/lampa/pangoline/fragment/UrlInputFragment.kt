@@ -63,7 +63,7 @@ import ru.lampa.pangoline.whatsnew.WhatsNew
 import java.util.Objects
 import kotlin.coroutines.CoroutineContext
 
-class FocusCrashException : Exception()
+class PangolineCrashException : Exception()
 
 /**
  * Fragment for displaying the URL input controls.
@@ -128,7 +128,7 @@ class UrlInputFragment :
         }
 
         /**
-         * Create a new UrlInputFragment with a gradient background (and the Focus logo). This configuration
+         * Create a new UrlInputFragment with a gradient background (and the Pangoline logo). This configuration
          * is usually shown if there's no content to be shown below (e.g. the current website).
          */
         @JvmStatic
@@ -695,7 +695,7 @@ class UrlInputFragment :
     }
 
     private fun handleExperimentsTrigger(input: String): Boolean {
-        if (input == "focus:test") {
+        if (input == "pangoline:test") {
             model?.showExperiments()
             return true
         }
@@ -703,8 +703,8 @@ class UrlInputFragment :
     }
 
     private fun handleCrashTrigger(input: String) {
-        if (input == "focus:crash") {
-            throw FocusCrashException()
+        if (input == "pangoline:crash") {
+            throw PangolineCrashException()
         }
     }
 
@@ -770,10 +770,7 @@ class UrlInputFragment :
     }
 
     private fun onFilter(searchText: String, view: InlineAutocompleteEditText?) {
-        // If the UrlInputFragment has already been hidden, don't bother with filtering. Because of the text
-        // input architecture on Android it's possible for onFilter() to be called after we've already
-        // hidden the Fragment, see the relevant bug for more background:
-        // https://github.com/mozilla-mobile/focus-android/issues/441#issuecomment-293691141
+
         if (!isVisible) {
             return
         }

@@ -31,7 +31,7 @@ import java.util.Locale
  */
 
 object CrashReporterWrapper {
-    private const val SOCORRO_APP_NAME = "Focus"
+    private const val SOCORRO_APP_NAME = "Pangoline"
     private const val TAG_BUILD_FLAVOR: String = "build_flavor"
     private const val TAG_BUILD_TYPE: String = "build_type"
     private const val TAG_LOCALE_LANG_TAG: String = "locale_lang_tag"

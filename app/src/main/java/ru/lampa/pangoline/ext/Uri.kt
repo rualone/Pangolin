@@ -17,7 +17,6 @@ import mozilla.components.support.ktx.kotlin.ELLIPSIS
  *   mail.google.com -> google.com
  *   www.tomshardware.co.uk -> tomshardware.co.uk
  *
- * Spec: https://github.com/mozilla-mobile/focus-android/issues/1231#issuecomment-326237077
  */
 fun Uri.truncatedHost(): String? {
     if (host.isNullOrEmpty()) {

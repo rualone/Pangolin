@@ -45,7 +45,7 @@ class InfoActivity : LocaleAwareAppCompatActivity() {
 
     override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
         if (name == IWebView::class.java.name) {
-            // We use a WebView for focus:rights as a workaround to link to other internal pages
+            // We use a WebView for pangoline:rights as a workaround to link to other internal pages
             val view = if (url == LocalizedContent.URL_RIGHTS) {
                 ClassicWebViewProvider().create(context, attrs)
             } else {

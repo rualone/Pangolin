@@ -22,8 +22,9 @@ import java.net.URLEncoder
 import java.util.Locale
 
 object SupportUtils {
+
     const val HELP_URL = "https://support.mozilla.org/kb/what-firefox-focus-android"
-    const val DEFAULT_BROWSER_URL = "https://support.mozilla.org/kb/set-firefox-focus-default-browser-android"
+    const val DEFAULT_BROWSER_URL = "https://support.mozilla.org/kb/set-pangoline-default-browser-android"
     const val REPORT_SITE_ISSUE_URL = "https://webcompat.com/issues/new?url=%s&label=browser-focus-geckoview"
     const val PRIVACY_NOTICE_URL = "https://www.mozilla.org/privacy/firefox-focus/"
 
@@ -41,9 +42,9 @@ object SupportUtils {
         AUTOCOMPLETE("autofill-domain-android"),
         TRACKERS("trackers"),
         USAGE_DATA("usage-data"),
-        WHATS_NEW("whats-new-focus-android-8"),
-        SEARCH_SUGGESTIONS("search-suggestions-focus-android"),
-        ALLOWLIST("focus-android-allowlist")
+        WHATS_NEW("whats-new-pangoline-android-8"),
+        SEARCH_SUGGESTIONS("search-suggestions-pangoline-android"),
+        ALLOWLIST("pangoline-android-allowlist")
     }
 
     fun getSumoURLForTopic(context: Context, topic: SumoTopic): String {
@@ -73,7 +74,7 @@ object SupportUtils {
             return context.packageManager.getPackageInfo(context.packageName, 0).versionName
         } catch (e: PackageManager.NameNotFoundException) {
             // This should be impossible - we should always be able to get information about ourselves:
-            throw IllegalStateException("Unable find package details for Focus", e)
+            throw IllegalStateException("Unable find package details for ", e)
         }
     }
 
