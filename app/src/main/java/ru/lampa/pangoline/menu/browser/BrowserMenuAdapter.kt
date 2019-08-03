@@ -104,7 +104,7 @@ class BrowserMenuAdapter(
             // "Open in Firefox Focus" to switch from a custom tab to the full-featured browser
             val appName = resources.getString(R.string.app_name)
             val label = resources.getString(R.string.menu_open_with_default_browser2, appName)
-            val menuItem = MenuItem.Default(R.id.open_in_firefox_focus, label, 0)
+            val menuItem = MenuItem.Default(R.id.open_in_pangoline, label, 0)
 
             items.add(menuItem)
         }

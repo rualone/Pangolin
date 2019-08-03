@@ -7,7 +7,7 @@ package ru.lampa.pangoline.webview.matcher;
 
 import android.util.JsonReader;
 
-import ru.lampa.pangoline.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.PangolineString;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ import java.util.ArrayList;
                 reader.beginArray();
 
                 while (reader.hasNext()) {
-                    final FocusString revhost = FocusString.create(reader.nextString()).reverse();
+                    final PangolineString revhost = PangolineString.create(reader.nextString()).reverse();
 
                     whitelist.put(revhost);
                 }
@@ -69,7 +69,7 @@ import java.util.ArrayList;
         }
 
         for (final String property : propertyList) {
-            final FocusString revhost = FocusString.create(property).reverse();
+            final PangolineString revhost = PangolineString.create(property).reverse();
 
             entityMap.putWhiteList(revhost, whitelist);
         }

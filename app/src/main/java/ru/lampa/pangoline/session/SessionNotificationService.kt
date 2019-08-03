@@ -161,7 +161,7 @@ class SessionNotificationService : Service() {
 
             // For #2901: The application is crashing due to the service not calling `startForeground`
             // before it times out. so this is a speculative fix to decrease the time between these two
-            // calls by running this after potentially expensive calls in FocusApplication.onCreate and
+            // calls by running this after potentially expensive calls in PangolineApplication.onCreate and
             // BrowserFragment.inflateView by posting it to the end of the main thread.
             ThreadUtils.postToMainThread(Runnable {
                 context.startService(intent)

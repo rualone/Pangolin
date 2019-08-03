@@ -15,11 +15,11 @@ import com.adjust.sdk.AdjustConfig;
 import com.adjust.sdk.LogLevel;
 
 import ru.lampa.pangoline.BuildConfig;
-import ru.lampa.pangoline.FocusApplication;
+import ru.lampa.pangoline.PangolineApplication;
 import ru.lampa.pangoline.telemetry.TelemetryWrapper;
 
 public class AdjustHelper {
-    public static void setupAdjustIfNeeded(FocusApplication application) {
+    public static void setupAdjustIfNeeded(PangolineApplication application) {
         // RELEASE: Enable Adjust - This class has different implementations for all build types.
 
         //noinspection ConstantConditions

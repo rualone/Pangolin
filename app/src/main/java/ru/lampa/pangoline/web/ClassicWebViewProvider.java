@@ -164,7 +164,7 @@ public class ClassicWebViewProvider implements IWebViewProvider {
      * Build the browser specific portion of the UA String, based on the webview's existing UA String.
      */
     @NonNull
-    public String getUABrowserString(@NonNull final String existingUAString, @NonNull final String focusToken) {
+    public String getUABrowserString(@NonNull final String existingUAString, @NonNull final String pangolineToken) {
         // Use the default WebView agent string here for everything after the platform, but insert
         // Focus in front of Chrome.
         // E.g. a default webview UA string might be:
@@ -180,7 +180,7 @@ public class ClassicWebViewProvider implements IWebViewProvider {
             // If this was located at the very end, then there's nothing we can do, so let's just
             // return focus:
             if (start >= existingUAString.length()) {
-                return focusToken;
+                return pangolineToken;
             }
         }
 
@@ -188,14 +188,14 @@ public class ClassicWebViewProvider implements IWebViewProvider {
 
         for (int i = 0; i < tokens.length; i++) {
             if (tokens[i].startsWith("Chrome")) {
-                tokens[i] = focusToken + " " + tokens[i];
+                tokens[i] = pangolineToken + " " + tokens[i];
 
                 return TextUtils.join(" ", tokens);
             }
         }
 
         // If we didn't find a chrome token, we just append the focus token at the end:
-        return TextUtils.join(" ", tokens) + " " + focusToken;
+        return TextUtils.join(" ", tokens) + " " + pangolineToken;
     }
 
     private String buildUserAgentString(final Context context, final WebSettings settings, final String appName) {
@@ -220,8 +220,8 @@ public class ClassicWebViewProvider implements IWebViewProvider {
             throw new IllegalStateException("Unable find package details for Focus", e);
         }
 
-        final String focusToken = appName + "/" + appVersion;
-        uaBuilder.append(getUABrowserString(existingWebViewUA, focusToken));
+        final String pangolineToken = appName + "/" + appVersion;
+        uaBuilder.append(getUABrowserString(existingWebViewUA, pangolineToken));
 
         return uaBuilder.toString();
     }

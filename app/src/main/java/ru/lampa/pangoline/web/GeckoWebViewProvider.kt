@@ -132,7 +132,7 @@ class GeckoWebViewProvider : IWebViewProvider {
     override fun disableBlocking(webSettings: WebSettings, systemWebView: SystemWebView) {
     }
 
-    override fun getUABrowserString(existingUAString: String, focusToken: String): String {
+    override fun getUABrowserString(existingUAString: String, pangolineToken: String): String {
         return ""
     }
 

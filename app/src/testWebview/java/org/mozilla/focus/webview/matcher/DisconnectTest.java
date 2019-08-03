@@ -36,10 +36,10 @@ public class DisconnectTest {
 
     @After
     public void cleanup() {
-        // Reset strict mode: for every test, Robolectric will create FocusApplication again.
-        // FocusApplication expects strict mode to be disabled (since it loads some preferences from disk),
+        // Reset strict mode: for every test, Robolectric will create PangolineApplication again.
+        // PangolineApplication expects strict mode to be disabled (since it loads some preferences from disk),
         // before enabling it itself. If we run multiple tests, strict mode will stay enabled
-        // and FocusApplication crashes during initialisation for the second test.
+        // and PangolineApplication crashes during initialisation for the second test.
         // This applies across multiple Test classes, e.g. DisconnectTest can cause
         // TrackingProtectionWebViewCLientTest to fail, unless it clears StrictMode first.
         // (FocusApplicaiton is initialised before @Before methods are run.)

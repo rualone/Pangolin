@@ -7,7 +7,7 @@ package ru.lampa.pangoline.webview.matcher;
 import android.util.JsonReader;
 import android.util.JsonToken;
 
-import ru.lampa.pangoline.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.PangolineString;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -104,7 +104,7 @@ public class BlocklistProcessor {
 
         @Override
         public void put(final String url, final String siteOwner) {
-            trie.put(FocusString.create(url).reverse());
+            trie.put(PangolineString.create(url).reverse());
         }
     }
 
@@ -152,7 +152,7 @@ public class BlocklistProcessor {
         }
 
         for (final String url : socialOverrides) {
-            socialTrie.put(FocusString.create(url).reverse());
+            socialTrie.put(PangolineString.create(url).reverse());
         }
 
         reader.endObject();

@@ -39,7 +39,7 @@ android {
     }
 
     // We have a three dimensional build configuration:
-    // BUILD TYPE (debug, release) X PRODUCT FLAVOR (focus, klar) X ARCHITECTURE (x86, arm, aarch64)
+    // BUILD TYPE (debug, release) X PRODUCT FLAVOR (pangoline) X ARCHITECTURE (x86, arm, aarch64)
 
     buildTypes {
         release {

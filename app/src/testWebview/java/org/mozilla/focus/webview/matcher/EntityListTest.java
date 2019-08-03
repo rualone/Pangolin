@@ -4,7 +4,7 @@ import android.net.Uri;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import ru.lampa.pangoline.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.PangolineString;
 import org.robolectric.RobolectricTestRunner;
 
 import static org.junit.Assert.assertFalse;
@@ -34,13 +34,13 @@ public class EntityListTest {
         // Thus mozilla.org can only use foo.com, but foo.mozilla.org can use foo.com and bar.com
 
         final Trie fooComTrie = Trie.createRootNode();
-        fooComTrie.put(FocusString.create(fooCom).reverse());
+        fooComTrie.put(PangolineString.create(fooCom).reverse());
 
         final Trie barComTrie = Trie.createRootNode();
-        barComTrie.put(FocusString.create(barCom).reverse());
+        barComTrie.put(PangolineString.create(barCom).reverse());
 
-        entityList.putWhiteList(FocusString.create(mozillaOrg).reverse(), fooComTrie);
-        entityList.putWhiteList(FocusString.create(fooMozillaOrg).reverse(), barComTrie);
+        entityList.putWhiteList(PangolineString.create(mozillaOrg).reverse(), fooComTrie);
+        entityList.putWhiteList(PangolineString.create(fooMozillaOrg).reverse(), barComTrie);
 
         assertTrue(entityList.isWhiteListed(Uri.parse("http://" + mozillaOrg), Uri.parse("http://" + fooCom)));
         assertFalse(entityList.isWhiteListed(Uri.parse("http://" + mozillaOrg), Uri.parse("http://" + barCom)));

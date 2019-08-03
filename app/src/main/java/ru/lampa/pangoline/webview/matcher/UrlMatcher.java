@@ -17,7 +17,7 @@ import android.util.JsonReader;
 
 import ru.lampa.pangoline.R;
 import ru.lampa.pangoline.utils.Settings;
-import ru.lampa.pangoline.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.PangolineString;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -184,7 +184,7 @@ public class UrlMatcher implements  SharedPreferences.OnSharedPreferenceChangeLi
         }
 
         for (final String pattern : patterns) {
-            defaultCategory.put(FocusString.create(pattern).reverse());
+            defaultCategory.put(PangolineString.create(pattern).reverse());
         }
 
         enabledCategories.add("default");
@@ -264,7 +264,7 @@ public class UrlMatcher implements  SharedPreferences.OnSharedPreferenceChangeLi
             return true;
         }
 
-        final FocusString revhost = FocusString.create(resourceHost).reverse();
+        final PangolineString revhost = PangolineString.create(resourceHost).reverse();
 
         for (final Map.Entry<String, Trie> category : categories.entrySet()) {
             if (enabledCategories.contains(category.getKey()) &&

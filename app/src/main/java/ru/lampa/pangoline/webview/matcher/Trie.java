@@ -6,7 +6,7 @@ package ru.lampa.pangoline.webview.matcher;
 
 import android.util.SparseArray;
 
-import ru.lampa.pangoline.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.PangolineString;
 
 /* package-private */ class Trie {
 
@@ -30,7 +30,7 @@ import ru.lampa.pangoline.webview.matcher.util.FocusString;
         }
 
         /* Convenience method so that clients aren't forced to do their own casting. */
-        public void putWhiteList(final FocusString string, final Trie whitelist) {
+        public void putWhiteList(final PangolineString string, final Trie whitelist) {
             WhiteListTrie node = (WhiteListTrie) super.put(string);
 
             if (node.whitelist != null) {
@@ -44,7 +44,7 @@ import ru.lampa.pangoline.webview.matcher.util.FocusString;
     public final SparseArray<Trie> children = new SparseArray<>();
     public boolean terminator = false;
 
-    public Trie findNode(final FocusString string) {
+    public Trie findNode(final PangolineString string) {
         if (terminator) {
             // Match achieved - and we're at a domain boundary. This is important, because
             // we don't want to return on partial domain matches. (E.g. if the trie node is bar.com,
@@ -66,7 +66,7 @@ import ru.lampa.pangoline.webview.matcher.util.FocusString;
         return next.findNode(string.substring(1));
     }
 
-    public Trie put(final FocusString string) {
+    public Trie put(final PangolineString string) {
         if (string.length() == 0) {
             terminator = true;
             return this;

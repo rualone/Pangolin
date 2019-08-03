@@ -12,7 +12,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import ru.lampa.pangoline.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.PangolineString;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
@@ -75,7 +75,7 @@ public class UrlMatcherTest {
                 final String domain = "category" + i + ".com";
 
                 final Trie trie = Trie.createRootNode();
-                trie.put(FocusString.create(domain).reverse());
+                trie.put(PangolineString.create(domain).reverse());
 
                 final String categoryName = "category" + i;
                 categories.put(categoryName, trie);

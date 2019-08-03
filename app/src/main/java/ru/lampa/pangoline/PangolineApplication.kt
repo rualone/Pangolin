@@ -19,7 +19,6 @@ import mozilla.components.service.fretboard.source.kinto.KintoExperimentSource
 import mozilla.components.service.fretboard.storage.flatfile.FlatFileExperimentStorage
 import mozilla.components.support.base.log.Log
 import mozilla.components.support.base.log.sink.AndroidLogSink
-import ru.lampa.pangoline.R
 import ru.lampa.pangoline.locale.LocaleAwareApplication
 import ru.lampa.pangoline.session.NotificationSessionObserver
 import ru.lampa.pangoline.session.VisibilityLifeCycleCallback
@@ -38,7 +37,7 @@ import ru.lampa.pangoline.web.WebViewProvider
 import java.io.File
 import kotlin.coroutines.CoroutineContext
 
-class FocusApplication : LocaleAwareApplication(), CoroutineScope {
+class PangolineApplication : LocaleAwareApplication(), CoroutineScope {
     lateinit var fretboard: Fretboard
 
     private var job = Job()
@@ -60,28 +59,28 @@ class FocusApplication : LocaleAwareApplication(), CoroutineScope {
 
         PreferenceManager.setDefaultValues(this, R.xml.settings, false)
 
-        TelemetryWrapper.init(this@FocusApplication)
+        TelemetryWrapper.init(this@PangolineApplication)
         loadExperiments()
 
         enableStrictMode()
 
         components.searchEngineManager.apply {
             launch(IO) {
-                load(this@FocusApplication)
+                load(this@PangolineApplication)
             }
 
-            registerForLocaleUpdates(this@FocusApplication)
+            registerForLocaleUpdates(this@PangolineApplication)
         }
 
-        AdjustHelper.setupAdjustIfNeeded(this@FocusApplication)
+        AdjustHelper.setupAdjustIfNeeded(this@PangolineApplication)
 
-        visibilityLifeCycleCallback = VisibilityLifeCycleCallback(this@FocusApplication)
+        visibilityLifeCycleCallback = VisibilityLifeCycleCallback(this@PangolineApplication)
         registerActivityLifecycleCallbacks(visibilityLifeCycleCallback)
 
         components.sessionManager.apply {
-            register(NotificationSessionObserver(this@FocusApplication))
+            register(NotificationSessionObserver(this@PangolineApplication))
             register(TelemetrySessionObserver())
-            register(CleanupSessionObserver(this@FocusApplication))
+            register(CleanupSessionObserver(this@PangolineApplication))
         }
 
         launch(IO) { fretboard.updateExperiments() }
@@ -100,7 +99,7 @@ class FocusApplication : LocaleAwareApplication(), CoroutineScope {
             })
         fretboard.loadExperiments()
         TelemetryWrapper.recordActiveExperiments(this)
-        WebViewProvider.determineEngine(this@FocusApplication)
+        WebViewProvider.determineEngine(this@PangolineApplication)
     }
 
     private fun enableStrictMode() {

@@ -6,7 +6,7 @@ package ru.lampa.pangoline.utils
 
 import android.content.Context
 import mozilla.components.service.fretboard.ExperimentDescriptor
-import ru.lampa.pangoline.FocusApplication
+import ru.lampa.pangoline.PangolineApplication
 import ru.lampa.pangoline.web.Config
 
 const val EXPERIMENTS_JSON_FILENAME = "experiments.json"
@@ -17,8 +17,8 @@ const val EXPERIMENTS_COLLECTION_NAME = "focus-experiments"
 val geckoEngineExperimentDescriptor = ExperimentDescriptor(Config.EXPERIMENT_DESCRIPTOR_GECKOVIEW_ENGINE)
 val homeScreenTipsExperimentDescriptor = ExperimentDescriptor(Config.EXPERIMENT_DESCRIPTOR_HOME_SCREEN_TIPS)
 
-val Context.app: FocusApplication
-    get() = applicationContext as FocusApplication
+val Context.app: PangolineApplication
+    get() = applicationContext as PangolineApplication
 
 fun Context.isInExperiment(descriptor: ExperimentDescriptor): Boolean =
         app.fretboard.isInExperiment(this, descriptor)

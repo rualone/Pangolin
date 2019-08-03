@@ -55,8 +55,8 @@ object WebViewProvider : IWebViewProvider {
         engine!!.requestDesktopSite(webSettings)
     }
 
-    override fun getUABrowserString(existingUAString: String, focusToken: String): String {
-        return engine!!.getUABrowserString(existingUAString, focusToken)
+    override fun getUABrowserString(existingUAString: String, pangolineToken: String): String {
+        return engine!!.getUABrowserString(existingUAString, pangolineToken)
     }
 
     override fun applyAppSettings(context: Context, webSettings: WebSettings, systemWebView: SystemWebView) {

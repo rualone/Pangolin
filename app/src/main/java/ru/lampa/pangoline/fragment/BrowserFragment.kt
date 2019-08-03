@@ -1098,7 +1098,7 @@ class BrowserFragment : WebFragment(), LifecycleObserver, View.OnClickListener,
                 webView?.stopLoading()
             }
 
-            R.id.open_in_firefox_focus -> {
+            R.id.open_in_pangoline -> {
                 session.customTabConfig = null
 
                 requireComponents.sessionManager.select(session)

@@ -13,12 +13,12 @@ import android.support.annotation.CheckResult;
  * the string to reverse (e.g. using StringBuffer.reverse()). This seems wasteful when we only
  * read our Strings character by character, in which case can just transpose positions as needed.
  */
-public abstract class FocusString {
+public abstract class PangolineString {
     protected final String string;
 
     protected abstract boolean isReversed();
 
-    private FocusString(final String string, final int offsetStart, final int offsetEnd) {
+    private PangolineString(final String string, final int offsetStart, final int offsetEnd) {
         this.string = string;
         this.offsetStart = offsetStart;
         this.offsetEnd = offsetEnd;
@@ -28,7 +28,7 @@ public abstract class FocusString {
         }
     }
 
-    public static FocusString create(final String string) {
+    public static PangolineString create(final String string) {
         return new ForwardString(string, 0, string.length());
     }
 
@@ -41,7 +41,7 @@ public abstract class FocusString {
     // offset at the end of the _raw_ input String
     final int offsetEnd;
 
-    @CheckResult public FocusString reverse() {
+    @CheckResult public PangolineString reverse() {
         if (isReversed()) {
             return new ForwardString(string, offsetStart, offsetEnd);
         } else {
@@ -51,9 +51,9 @@ public abstract class FocusString {
 
     public abstract char charAt(final int position);
 
-    public abstract FocusString substring(final int startIndex);
+    public abstract PangolineString substring(final int startIndex);
 
-    private static class ForwardString extends FocusString {
+    private static class ForwardString extends PangolineString {
         public ForwardString(final String string, final int offsetStart, final int offsetEnd) {
             super(string, offsetStart, offsetEnd);
         }
@@ -73,13 +73,13 @@ public abstract class FocusString {
         }
 
         @Override
-        public FocusString substring(final int startIndex) {
+        public PangolineString substring(final int startIndex) {
             // Just a normal substring
             return new ForwardString(string, offsetStart + startIndex, offsetEnd);
         }
     }
 
-    private static class ReverseString extends FocusString {
+    private static class ReverseString extends PangolineString {
         public ReverseString(final String string, final int offsetStart, final int offsetEnd) {
             super(string, offsetStart, offsetEnd);
         }
@@ -99,7 +99,7 @@ public abstract class FocusString {
         }
 
         @Override
-        public FocusString substring(int startIndex) {
+        public PangolineString substring(int startIndex) {
             return new ReverseString(string, offsetStart, offsetEnd - startIndex);
         }
     }

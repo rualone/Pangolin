@@ -6,13 +6,13 @@ package ru.lampa.pangoline.ext
 
 import android.content.Context
 import ru.lampa.pangoline.Components
-import ru.lampa.pangoline.FocusApplication
+import ru.lampa.pangoline.PangolineApplication
 
 /**
- * Get the FocusApplication object from a context.
+ * Get the PangolineApplication object from a context.
  */
-val Context.application: FocusApplication
-    get() = applicationContext as FocusApplication
+val Context.application: PangolineApplication
+    get() = applicationContext as PangolineApplication
 
 /**
  * Get the components of this application.

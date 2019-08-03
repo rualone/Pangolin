@@ -10,7 +10,7 @@ import android.text.TextUtils;
 
 import ru.lampa.pangoline.utils.UrlUtils;
 import ru.lampa.pangoline.webview.matcher.Trie.WhiteListTrie;
-import ru.lampa.pangoline.webview.matcher.util.FocusString;
+import ru.lampa.pangoline.webview.matcher.util.PangolineString;
 
 /* package-private */ class EntityList {
 
@@ -20,7 +20,7 @@ import ru.lampa.pangoline.webview.matcher.util.FocusString;
         rootNode = WhiteListTrie.createRootNode();
     }
 
-    public void putWhiteList(final FocusString revhost, final Trie whitelist) {
+    public void putWhiteList(final PangolineString revhost, final Trie whitelist) {
         rootNode.putWhiteList(revhost, whitelist);
     }
 
@@ -33,8 +33,8 @@ import ru.lampa.pangoline.webview.matcher.util.FocusString;
 
         if (UrlUtils.isPermittedResourceProtocol(resource.getScheme()) &&
                 UrlUtils.isSupportedProtocol(site.getScheme())) {
-            final FocusString revSitehost = FocusString.create(site.getHost()).reverse();
-            final FocusString revResourcehost = FocusString.create(resource.getHost()).reverse();
+            final PangolineString revSitehost = PangolineString.create(site.getHost()).reverse();
+            final PangolineString revResourcehost = PangolineString.create(resource.getHost()).reverse();
 
             return isWhiteListed(revSitehost, revResourcehost, rootNode);
         } else {
@@ -44,7 +44,7 @@ import ru.lampa.pangoline.webview.matcher.util.FocusString;
         }
     }
 
-    private boolean isWhiteListed(final FocusString site, final FocusString resource, final Trie revHostTrie) {
+    private boolean isWhiteListed(final PangolineString site, final PangolineString resource, final Trie revHostTrie) {
         final WhiteListTrie next = (WhiteListTrie) revHostTrie.children.get(site.charAt(0));
 
         if (next == null) {
