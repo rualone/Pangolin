@@ -65,10 +65,10 @@ android {
 
     productFlavors {
         // In most countries we are Firefox Focus - but in some we need to be Firefox Klar
-        focus {
+        pangoline {
             dimension "product"
 
-            applicationIdSuffix ".focus"
+            applicationIdSuffix ".pangoline"
         }
 
         x86 {
@@ -95,14 +95,14 @@ android {
         }
 
         // Release
-        focusX86Release.root = 'src/pangolineRelease'
-        focusArmRelease.root = 'src/pangolineRelease'
-        focusAarch64Release.root = 'src/pangolineRelease'
+        pangolineX86Release.root = 'src/pangolineRelease'
+        pangolineArmRelease.root = 'src/pangolineRelease'
+        pangolineAarch64Release.root = 'src/pangolineRelease'
 
         // Debug
-        focusX86Debug.root = 'src/pangolineDebug'
-        focusArmDebug.root = 'src/pangolineDebug'
-        focusAarch64Debug.root = 'src/pangolineDebug'
+        pangolineX86Debug.root = 'src/pangolineDebug'
+        pangolineArmDebug.root = 'src/pangolineDebug'
+        pangolineAarch64Debug.root = 'src/pangolineDebug'
     }
 }
 
