@@ -11,7 +11,7 @@
         android:shortcutLongLabel="@string/shortcut_erase_long_label">
         <intent
             android:action="erase"
-            android:targetPackage="ru.lampa.pangoline.
+            android:targetPackage="ru.lampa.pangoline"
             android:targetClass="ru.lampa.pangoline.activity.EraseShortcutActivity">
                 <extra android:name="shortcut" android:value="true" />
         </intent>
@@ -24,7 +24,7 @@
       android:shortcutLongLabel="@string/shortcut_erase_and_open_short_label">
     <intent
         android:action="erase"
-        android:targetPackage="ru.lampa.pangoline.
+        android:targetPackage="ru.lampa.pangoline"
         android:targetClass="ru.lampa.pangoline.activity.EraseAndOpenShortcutActivity">
       <extra android:name="shortcut" android:value="true" />
     </intent>
