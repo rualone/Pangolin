@@ -38,7 +38,7 @@
             android:textColor="#929292"
             android:textSize="12sp"
             android:visibility="gone"
-            tools:text="Powered by Firefox Focus" />
+            tools:text="Powered by Pangoline" />
 
     </LinearLayout>
 

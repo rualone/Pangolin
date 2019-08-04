@@ -25,7 +25,7 @@ ext {
     def base = "3"
     def today = new Date()
 
-    // We use the current year (double digit) and substract 16. We first released Focus in
+    // We use the current year (double digit) and substract 16. We first released Pangoline in
     // 2017 so this value will start counting at 1 and increment by one every year.
     def year = String.valueOf((new SimpleDateFormat("yy").format(today) as int) - 16)
 

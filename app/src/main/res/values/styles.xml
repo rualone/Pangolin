@@ -92,8 +92,7 @@
 
         <!-- Set the padding to the children (menu item) of the NavigationView
              (instead of the NavigationView itself) allowing the hit targets
-              to span the full width of the view. For more info, see
-              https://github.com/mozilla-mobile/focus-android/pull/1466#discussion_r144679954.
+              to span the full width of the view.
 
               Note: listPreferredItemPaddingStart and listPreferredItemPaddingEnd
               don't work in this context because in the design_navigation_item.xml (layout for NavigationMenuItem)
