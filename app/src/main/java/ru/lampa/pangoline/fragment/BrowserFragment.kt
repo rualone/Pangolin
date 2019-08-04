@@ -719,7 +719,7 @@ class BrowserFragment : WebFragment(), LifecycleObserver, View.OnClickListener,
 
         crash_container.visibility = View.VISIBLE
         tabs.hide()
-        trackingProtectionView?.setImageResource(R.drawable.ic_firefox)
+        trackingProtectionView?.setImageResource(R.drawable.ic_pangoline)
         menuView?.visibility = View.GONE
         erase?.visibility = View.GONE
         urlView?.text = requireContext().getString(R.string.tab_crash_report_title)
